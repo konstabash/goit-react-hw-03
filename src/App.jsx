@@ -1,8 +1,8 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import ContactForm from "./Components/ContactForm/ContactForm";
-import SearchBox from "./Components/SearchBox/SearchBox";
-import ContactList from "./Components/ContactList/ContactList";
+import ContactForm from "./components/ContactForm/ContactForm";
+import SearchBox from "./components/SearchBox/SearchBox";
+import ContactList from "./components/ContactList/ContactList";
 
 const startContacts = [
   { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
@@ -30,6 +30,7 @@ function App() {
   );
 
   const addContact = (newContact) => {
+    console.log(newContact);
     setContacts((prevContacts) => {
       return [...prevContacts, newContact];
     });

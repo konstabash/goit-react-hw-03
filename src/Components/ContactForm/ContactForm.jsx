@@ -13,7 +13,11 @@ const ContactForm = ({ addContact }) => {
   const numberFiledId = nanoid();
 
   const handleSubmit = (values, actions) => {
-    addContact(values);
+    const newContact = {
+      ...values,
+      id: nanoid(),
+    };
+    addContact(newContact);
     actions.resetForm();
   };
 
